@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.search-box {
+  position: fixed;
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: cornflowerblue;
+  margin-bottom: 24px;
+  z-index: 1;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 8px;
+  margin: 10px;
+}
+
+input {
+  &:not(placeholder) {
+    background-color: #ffffff;
+  }
+
+  min-width: 280px;
+  height: 40px;
+  margin-right: 10px;
+  padding: 15px 16px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.search-btn,
+.load-more {
+  height: 40px;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+  background-color: #f5f4fa;
+  transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
+
+  &:hover {
+    color: #ffffff;
+    background-color: #2196f3;
+    box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+  }
+}
+
+.gallery {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 20px);
+  margin-left: calc(-1 * 20px);
+
+}
+
+.photo-card {
+  flex-basis: calc(25% - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 455px;
+  height: 387px;
+  overflow: hidden;
+
+}
+
+.gallery-link {
+  width: auto;
+  height: auto;
+
+}
+
+.gallery-image {
+  display: block;
+  overflow: hidden;
+  width: 455px;
+  height: 305px;
+}
+
+.info {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+// .info-item {}
+
+.info-item+.info-item {
+  margin-left: 10px;
+}
+
+.load-more-btn {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 8px;
+}
