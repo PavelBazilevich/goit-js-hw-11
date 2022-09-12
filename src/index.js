@@ -13,7 +13,7 @@ let page = 1;
 let searchQuery = '';
 let simpleGalery = new SimpleLightbox('.gallery a');
 
-// const renderMarkup = arr => {
+const renderMarkup = arr => {
   const markup = arr
     .map(image => {
       return `<div class="photo-card">
