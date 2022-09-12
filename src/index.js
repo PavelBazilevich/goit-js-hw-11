@@ -5,7 +5,7 @@ import './sass/_search.scss';
 import { fetchArticles } from './api-service';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
+//  спроба
 const perPage = 40;
 let page = 1;
 let searchQuery = '';
