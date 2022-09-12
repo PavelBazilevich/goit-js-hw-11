@@ -5,7 +5,9 @@ import Notiflix from 'notiflix';
 import { fetchArticles } from './api-service';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// debug
+// please
+
+
 const perPage = 40;
 let page = 1;
 let searchQuery = '';
