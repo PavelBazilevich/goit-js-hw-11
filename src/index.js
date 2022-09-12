@@ -9,7 +9,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const perPage = 40;
 let page = 1;
 let searchQuery = '';
-let simpleGalery = new SimpleLightbox('.galery a');
+let simpleGalery = new SimpleLightbox('.gallery a');
 
 const renderMarkup = arr => {
   const markup = arr
