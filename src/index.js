@@ -1,7 +1,7 @@
-import refs from './refs';
-import Notiflix from 'notiflix';
 import './sass/_common.scss';
 import './sass/_search.scss';
+import refs from './refs';
+import Notiflix from 'notiflix';
 import { fetchArticles } from './api-service';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -9,13 +9,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const perPage = 40;
 let page = 1;
 let searchQuery = '';
-let simpleGalery = new SimpleLightbox('.galery a', {
-  captionsData: 'alt',
-  captionPosition: 'bottom',
-  captionDelay: 250,
-  overlay: true,
-  enableKeyboard: true,
-});
+let simpleGalery = new SimpleLightbox('.galery a');
 
 const renderMarkup = arr => {
   const markup = arr
@@ -71,13 +65,6 @@ const searchPhoto = async event => {
     Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
     changePage(data.hits);
     refs.loadMore.classList.toggle('is-hidden');
-    if (data.totalHits <= perPage) {
-      setTimeout(() => {
-        Notify.info('There are all images matching your search query.');
-        refs.loadMore.classList.toggle('is-hidden');
-        return;
-      }, 1000);
-    }
   } catch (error) {
     console.error(error);
     console.log(error);
@@ -99,9 +86,6 @@ const loadMoreContent = async () => {
     console.log(error);
   }
 };
-
-
-
 
 refs.searchForm.addEventListener('submit', searchPhoto);
 refs.loadMore.addEventListener('click', loadMoreContent);
