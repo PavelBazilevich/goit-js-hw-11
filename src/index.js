@@ -5,7 +5,7 @@ import './sass/_search.scss';
 import { fetchArticles } from './api-service';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-//  спроба
+
 const perPage = 40;
 let page = 1;
 let searchQuery = '';
@@ -100,10 +100,8 @@ const loadMoreContent = async () => {
   }
 };
 
-function oneClick(event) {
-  event.preventDefault();
-}
 
-refs.galleryListRef.addEventListener('click', oneClick);
+
+
 refs.searchForm.addEventListener('submit', searchPhoto);
 refs.loadMore.addEventListener('click', loadMoreContent);
